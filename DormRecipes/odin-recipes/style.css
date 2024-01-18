@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap');
+
+
+/* CSS reset: technique used to provide consistent styling. Aims to reset or normalize the default styles that browsers apply to various HTML elements */
+* {
+    margin: 0;                  /* sets all margin elements to 0 meaning no extra space between elements and edges of the page. */
+    padding: 0;                 /* sets the padding of all elements to 0 meaning no extra space between the content and the border of the elements.*/
+    box-sizing: border-box;     /* setting it to border-box ensures that the specified width and height properties include both the element's content and its padding and border. preventing unexpected increases in size  when padding or borders are added.*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFECCB;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+li, a, button{ /* setting the class of these certain classes */
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 500; /* pulled from the google font */
+    font-size: 16px;
+    color: black;
+    text-decoration: none; /* removoing links */
+    font-size: 18px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer; /* when we hover over it will turn into a cursor pointer */
+    font-style: italic;
+}
+
+.nav__links{
+    list-style: none; /* removed bullet points */
+}
+
+.nav__links li{ /* targeting each item in the list */
+    display: inline-block; /* instead of stacking each other. They're going side by side*/
+    padding:  0px 20px; /* 0(top & bottom) 20(left % right) */
+
+}
+
+.nav__links li a { /* the items and the a tags */
+    transition: all 0.3s ease 0s;  
+}
+
+.nav__links li a:hover{
+    color: #A69900; /* changes color to blue when I hover over it */
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #DE9810;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #A69900;
+}
+
+
+/* section 2*/
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+.intro-hero{
+    display: flex;
+    flex-direction: column; /* words are stacking on top of each other*/
+    text-align: center;
+    font-size: 20px;
+    margin-right: 50px; /* put space between the pic & words*/
+    flex-basis: 500px;
+    margin-top: 80px;
+}
+
+.hero-img img {
+    border: 2px solid rgb(0, 0, 0, 0);
+    border-radius: 15px;
+    width: 400px; 
+    height: 400px;
+}
+
+
+/* Section 2 */
+.content-pics{
+    display: flex;
+    justify-content: center;
+}
+
+
+.content-pics img{
+    border: 2px solid #DE9810;
+    border-radius: 15px;
+    width: 220px;
+    height: 200px;
+    margin-right: 30px;
+}
+
+.content-pics p{
+    text-align: center;
+}
+
+
+
+/* edits footer */
+footer{
+    background: #DE9810;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 30px 20px 10px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;  /* moves icons to center */
+}
+
+.social-icons a{
+    text-decoration: none;
+    padding: 10px;          /* spreads icons apart */
+    background: #BD8A27;
+    margin: 10px;
+    border-radius: 50% /* percentage turns them into circles */
+}
+
+.social-icons a i{
+    font-size: 2em; /* makes icons grow */
+    color: white;
+    opacity: 0.9; /* ?? */
+}
+
+.social-icons a:hover{ /* hoever effect on icons */
+    background: white;
+    transition: 0.5s;  /* slow the time of it down */
+}
+
+.social-icons a:hover i{
+    color: #DE9810;
+    transition: 0.5s;
+}
+
+.footer-view{
+    margin: 30px;  /* moves home and contact */
+}
+
+.footer-view ul{
+    display: flex; /* sits them next to each other */
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-view ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-view ul li a:hover{
+    opacity: 1;
+}
+
+.footer-bottom{
+    background: #BD8A27;
+    padding: 10px;
+    text-align: center; /* moves text to the center */
+}
+
+.footer-bottom p{
+    color: #402E32;
+}
+
+.designer{ /* only impacting my name */
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 4px;
+
+}
+
+/* nav menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #DE9810;
+    padding: 10px;
+  }
+  
+  .dropdown:hover .sub-menu {
+    display: block;
+  }
+
+.meal-image{
+    display: flex;
+    justify-content: center;
+}
+
+.meal-image img{
+    border: 2px solid rgb(0, 0, 0, 0);
+    border-radius: 15px;
+    height: 600px;
+}
+
+
+/* for every food html */
+
+.header-box{
+    display: flex;
+    justify-content: center;
+}
+
+.header-recipes{
+    text-align: center;
+    font-style: italic;
+    background: #DE9810;;
+    color: #FFECCB;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.ingredients{ /* heading */
+    color: #DE9810;
+    font-size: 40px;
+    text-align: center;
+    margin-left:  60px;
+    text-decoration: underline green;
+}
+
+.ingredients-list li{
+    color: #DE9810;
+    font-size: 20px;
+    margin-left: 230px;
+}
+.steps{  /* steps heading */
+    color: #DE9810;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 60px;
+    text-decoration: underline green;
+}
+.step-list li{  /* steps list */
+    color: #DE9810;
+    font-size: 18px;
+    margin-left: 230px;
+}
+.end{
+    color: #DE9810;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Waffles */
+.waf-ingredients{ /* waffles little paragraphs */
+    color: #DE9810;
+    margin-left: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* pancakes */
+.ingredients-list p{
+    color: #DE9810;
+    font-size: 22px;
+    margin-left: 185px;
+    margin-bottom: 20px;
+}
+
+
+/* food pages footer */
+
+.food-footer{
+    background:  #A69900;
+    padding: 8px;
+}
+.food-footer a{
+    text-align: center;
+    margin-left: 600px;
+}
+
